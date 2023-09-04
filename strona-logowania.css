@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;/* 100% obszaru roboczego*/
+    width: 100%;
+    background: url(wallpaperflare-cropped.jpg)no-repeat;/*nie powiela zdjęcia tła podczas zmiany powiększenia na stronie*/
+    background-position: center;
+    background-size: cover;/*sprawia, że zdjęcie nie zmienia wielkości wraz z powiększeniem strony*/
+}
+
+.form-box{ /*prostokąt w którym jest zawarte wszystko od logowania do "Register"*/
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 25px;/*zaokrągla rogi promieniem 25px*/
+    backdrop-filter: blur(2px);/*rozmywa tło, im większa liczba pixeli, tym większe rozmycie*/
+    display: flex;
+    justify-content: center;/*wyśrodkowuje wszystko w flexie*/
+    align-items: center;
+}
+
+h2{
+    font-size: 2em;/*Em (relative to the font-size of the element) to jednostka miary, która bazuje na rozmiarze czcionki danego elementu lub bezpośredniego rodzica tego elementu*/
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label{
+    position: absolute;
+    top:50%;
+    left: 5px;
+    transform: translateY(-50%);/*przenosi napisy o 50% ich wysokości w osi y*/
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;/*wyłącza możliwość kliknięcia na link(element) staje się on nieaktywny*/
+    transition: .5s;/*przesunięcie wyrazów trwa 0,5s*/
+
+}
+
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;/*odsówa napisy Email i Password w górę po kliknięciu na pole do uzupełnienia a po wpisaniu danych napisy na nie nie najadą*/
+}
+
+
+.inputbox input{
+    width: 100%;
+    height: 50px;
+    background:transparent;/*tworzy nam przeźroczyste tło*/
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+    color: #fff;/*kolor czcionki jaką będziemy uzupełniać  dane logowania będzie biały*/
+    
+}
+
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.forget{
+    margin: -15px 0 15px;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}
+
+.forget label input{
+    margin-right: 3px;
+}
+
+.forget label a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.forget label a:hover{
+    text-decoration: underline;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    }
+
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register p a:hover{
+    text-decoration: underline;
+}
